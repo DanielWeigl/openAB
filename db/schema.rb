@@ -14,16 +14,21 @@
 ActiveRecord::Schema.define(:version => 20130601161650) do
 
   create_table "adresses", :force => true do |t|
+    t.integer  "anrede_id"
+    t.integer  "akademischerTitel_id"
+    t.integer  "berufsTitel_id"
+    t.integer  "berufsFunktion_id"
     t.string   "vorname"
     t.string   "nachname"
     t.string   "adrStrasse"
     t.string   "adrOrt"
     t.string   "adrPlz"
+    t.string   "adrLand"
     t.string   "firma"
     t.string   "institution"
     t.boolean  "newsletter"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
   create_table "akademischer_titels", :force => true do |t|
