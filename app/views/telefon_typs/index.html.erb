@@ -1,0 +1,23 @@
+<h1>Listing telefon_typs</h1>
+
+<table>
+  <tr>
+    <th>Typ</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @telefon_typs.each do |telefon_typ| %>
+  <tr>
+    <td><%= telefon_typ.typ %></td>
+    <td><%= link_to 'Show', telefon_typ %></td>
+    <td><%= link_to 'Edit', edit_telefon_typ_path(telefon_typ) %></td>
+    <td><%= link_to 'Destroy', telefon_typ, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Telefon typ', new_telefon_typ_path %>

@@ -1,0 +1,69 @@
+<%= form_for(@adress) do |f| %>
+  <% if @adress.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adress.errors.count, "error") %> prohibited this adress from being saved:</h2>
+
+      <ul>
+      <% @adress.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :anredeTyp %><br />
+    <%= f.text_field :anredeTyp %>
+  </div>
+  <div class="field">
+    <%= f.label :akademischerTitel %><br />
+    <%= f.text_field :akademischerTitel %>
+  </div>
+  <div class="field">
+    <%= f.label :berufsTitel %><br />
+    <%= f.text_field :berufsTitel %>
+  </div>
+  <div class="field">
+    <%= f.label :berufsFunktion %><br />
+    <%= f.text_field :berufsFunktion %>
+  </div>
+  <div class="field">
+    <%= f.label :vorname %><br />
+    <%= f.text_field :vorname %>
+  </div>
+  <div class="field">
+    <%= f.label :nachname %><br />
+    <%= f.text_field :nachname %>
+  </div>
+  <div class="field">
+    <%= f.label :adrStrasse %><br />
+    <%= f.text_field :adrStrasse %>
+  </div>
+  <div class="field">
+    <%= f.label :adrOrt %><br />
+    <%= f.text_field :adrOrt %>
+  </div>
+  <div class="field">
+    <%= f.label :adrPlz %><br />
+    <%= f.text_field :adrPlz %>
+  </div>
+  <div class="field">
+    <%= f.label :adrLand %><br />
+    <%= f.text_field :adrLand %>
+  </div>
+  <div class="field">
+    <%= f.label :firma %><br />
+    <%= f.text_field :firma %>
+  </div>
+  <div class="field">
+    <%= f.label :institution %><br />
+    <%= f.text_field :institution %>
+  </div>
+  <div class="field">
+    <%= f.label :newsletter %><br />
+    <%= f.check_box :newsletter %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

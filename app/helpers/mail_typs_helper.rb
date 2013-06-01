@@ -1,0 +1,2 @@
+module MailTypsHelper
+end

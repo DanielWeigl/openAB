@@ -1,0 +1,47 @@
+<h1>Listing adresses</h1>
+
+<table>
+  <tr>
+    <th>Anredetyp</th>
+    <th>Akademischertitel</th>
+    <th>Berufstitel</th>
+    <th>Berufsfunktion</th>
+    <th>Vorname</th>
+    <th>Nachname</th>
+    <th>Adrstrasse</th>
+    <th>Adrort</th>
+    <th>Adrplz</th>
+    <th>Adrland</th>
+    <th>Firma</th>
+    <th>Institution</th>
+    <th>Newsletter</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @adresses.each do |adress| %>
+  <tr>
+    <td><%= adress.anredeTyp %></td>
+    <td><%= adress.akademischerTitel %></td>
+    <td><%= adress.berufsTitel %></td>
+    <td><%= adress.berufsFunktion %></td>
+    <td><%= adress.vorname %></td>
+    <td><%= adress.nachname %></td>
+    <td><%= adress.adrStrasse %></td>
+    <td><%= adress.adrOrt %></td>
+    <td><%= adress.adrPlz %></td>
+    <td><%= adress.adrLand %></td>
+    <td><%= adress.firma %></td>
+    <td><%= adress.institution %></td>
+    <td><%= adress.newsletter %></td>
+    <td><%= link_to 'Show', adress %></td>
+    <td><%= link_to 'Edit', edit_adress_path(adress) %></td>
+    <td><%= link_to 'Destroy', adress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Adresse', new_adress_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@berufs_funktion) do |f| %>
+  <% if @berufs_funktion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@berufs_funktion.errors.count, "error") %> prohibited this berufs_funktion from being saved:</h2>
+
+      <ul>
+      <% @berufs_funktion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :funktion %><br />
+    <%= f.text_field :funktion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

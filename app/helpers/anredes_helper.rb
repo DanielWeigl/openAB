@@ -1,0 +1,2 @@
+module AnredesHelper
+end

@@ -1,0 +1,23 @@
+<h1>Listing akademischer_titels</h1>
+
+<table>
+  <tr>
+    <th>Titel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @akademischer_titels.each do |akademischer_titel| %>
+  <tr>
+    <td><%= akademischer_titel.titel %></td>
+    <td><%= link_to 'Show', akademischer_titel %></td>
+    <td><%= link_to 'Edit', edit_akademischer_titel_path(akademischer_titel) %></td>
+    <td><%= link_to 'Destroy', akademischer_titel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Akademischer titel', new_akademischer_titel_path %>

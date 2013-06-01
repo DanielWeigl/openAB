@@ -1,0 +1,21 @@
+<%= form_for(@mail_typ) do |f| %>
+  <% if @mail_typ.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mail_typ.errors.count, "error") %> prohibited this mail_typ from being saved:</h2>
+
+      <ul>
+      <% @mail_typ.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :typ %><br />
+    <%= f.text_field :typ %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

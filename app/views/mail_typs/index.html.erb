@@ -1,0 +1,23 @@
+<h1>Listing mail_typs</h1>
+
+<table>
+  <tr>
+    <th>Typ</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mail_typs.each do |mail_typ| %>
+  <tr>
+    <td><%= mail_typ.typ %></td>
+    <td><%= link_to 'Show', mail_typ %></td>
+    <td><%= link_to 'Edit', edit_mail_typ_path(mail_typ) %></td>
+    <td><%= link_to 'Destroy', mail_typ, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mail typ', new_mail_typ_path %>

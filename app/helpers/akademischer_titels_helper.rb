@@ -1,0 +1,2 @@
+module AkademischerTitelsHelper
+end

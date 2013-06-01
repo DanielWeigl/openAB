@@ -1,0 +1,23 @@
+<h1>Listing anredes</h1>
+
+<table>
+  <tr>
+    <th>Anrede</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @anredes.each do |anrede| %>
+  <tr>
+    <td><%= anrede.anrede %></td>
+    <td><%= link_to 'Show', anrede %></td>
+    <td><%= link_to 'Edit', edit_anrede_path(anrede) %></td>
+    <td><%= link_to 'Destroy', anrede, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Anrede', new_anrede_path %>

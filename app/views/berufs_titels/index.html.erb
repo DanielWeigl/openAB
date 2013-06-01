@@ -1,0 +1,23 @@
+<h1>Listing berufs_titels</h1>
+
+<table>
+  <tr>
+    <th>Titel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @berufs_titels.each do |berufs_titel| %>
+  <tr>
+    <td><%= berufs_titel.titel %></td>
+    <td><%= link_to 'Show', berufs_titel %></td>
+    <td><%= link_to 'Edit', edit_berufs_titel_path(berufs_titel) %></td>
+    <td><%= link_to 'Destroy', berufs_titel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Berufs titel', new_berufs_titel_path %>

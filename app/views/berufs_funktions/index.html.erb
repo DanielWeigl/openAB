@@ -1,0 +1,23 @@
+<h1>Listing berufs_funktions</h1>
+
+<table>
+  <tr>
+    <th>Funktion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @berufs_funktions.each do |berufs_funktion| %>
+  <tr>
+    <td><%= berufs_funktion.funktion %></td>
+    <td><%= link_to 'Show', berufs_funktion %></td>
+    <td><%= link_to 'Edit', edit_berufs_funktion_path(berufs_funktion) %></td>
+    <td><%= link_to 'Destroy', berufs_funktion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Berufs funktion', new_berufs_funktion_path %>

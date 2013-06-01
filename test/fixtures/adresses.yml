@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  anredeTyp: 
+  akademischerTitel: 
+  berufsTitel: 
+  berufsFunktion: 
+  vorname: MyString
+  nachname: MyString
+  adrStrasse: MyString
+  adrOrt: MyString
+  adrPlz: MyString
+  adrLand: 
+  firma: MyString
+  institution: MyString
+  newsletter: false
+
+two:
+  anredeTyp: 
+  akademischerTitel: 
+  berufsTitel: 
+  berufsFunktion: 
+  vorname: MyString
+  nachname: MyString
+  adrStrasse: MyString
+  adrOrt: MyString
+  adrPlz: MyString
+  adrLand: 
+  firma: MyString
+  institution: MyString
+  newsletter: false

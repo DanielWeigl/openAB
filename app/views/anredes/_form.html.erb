@@ -1,0 +1,21 @@
+<%= form_for(@anrede) do |f| %>
+  <% if @anrede.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anrede.errors.count, "error") %> prohibited this anrede from being saved:</h2>
+
+      <ul>
+      <% @anrede.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :anrede %><br />
+    <%= f.text_field :anrede %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

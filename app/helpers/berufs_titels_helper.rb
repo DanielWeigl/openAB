@@ -1,0 +1,2 @@
+module BerufsTitelsHelper
+end

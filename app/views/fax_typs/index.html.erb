@@ -1,0 +1,23 @@
+<h1>Listing fax_typs</h1>
+
+<table>
+  <tr>
+    <th>Typ</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fax_typs.each do |fax_typ| %>
+  <tr>
+    <td><%= fax_typ.typ %></td>
+    <td><%= link_to 'Show', fax_typ %></td>
+    <td><%= link_to 'Edit', edit_fax_typ_path(fax_typ) %></td>
+    <td><%= link_to 'Destroy', fax_typ, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fax typ', new_fax_typ_path %>
