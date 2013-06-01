@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  
+  <div class="field">
+    <%= collection_select(:adresse, :akademischerTitel_id, AkademischerTitel.all, :id, :titel) %>
+  </div>
   <div class="field">
     <%= f.label :vorname %><br />
     <%= f.text_field :vorname %>
