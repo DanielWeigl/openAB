@@ -12,7 +12,7 @@
   <% end %>
   
   <div class="field">
-    <%= collection_select(:adresse, :akademischerTitel_id, AkademischerTitel.all, :id, :titel) %>
+    <%= f.collection_select( :akademischerTitel_id, AkademischerTitel.all, :id, :titel, :include_blank => true) %>
   </div>
   <div class="field">
     <%= f.label :vorname %><br />

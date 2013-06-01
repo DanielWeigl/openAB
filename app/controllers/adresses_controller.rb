@@ -1,3 +1,4 @@
+
 class AdressesController < ApplicationController
   # GET /adresses
   # GET /adresses.json
@@ -41,7 +42,7 @@ class AdressesController < ApplicationController
   # POST /adresses.json
   def create
     @adress = Adresse.new(params[:adress])
-
+    
     respond_to do |format|
       if @adress.save
         format.html { redirect_to @adress, notice: 'Adresse was successfully created.' }
@@ -57,9 +58,9 @@ class AdressesController < ApplicationController
   # PUT /adresses/1.json
   def update
     @adress = Adresse.find(params[:id])
-
+    
     respond_to do |format|
-      if @adress.update_attributes(params[:adress])
+      if @adress.update_attributes(params[:adresse])
         format.html { redirect_to @adress, notice: 'Adresse was successfully updated.' }
         format.json { head :no_content }
       else
