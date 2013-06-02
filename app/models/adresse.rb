@@ -4,6 +4,7 @@ class Adresse < ActiveRecord::Base
   belongs_to :berufsFunktion
   belongs_to :berufsTitel
   belongs_to :land
+  has_many :tags
   
   attr_accessible :adrOrt, :adrPlz, :adrStrasse, :firma, :institution, :nachname, :newsletter, :vorname, 
       :email, :tel1, :tel2, :fax, 

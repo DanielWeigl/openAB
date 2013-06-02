@@ -13,3 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require bootstrap.js
+//= require jquery-ui-1.8.6.custom.min.js
+//= require jquery.autoGrowInput.js
+//= require jquery.tagedit.js

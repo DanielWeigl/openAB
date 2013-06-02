@@ -11,6 +11,14 @@ class AdressesController < ApplicationController
     end
   end
 
+  def all_tags
+    @tags = Tag.all
+    render :json => @tags
+    #respond_to do :json  
+    #  format.json { render json: @tags }
+    #end
+  end
+  
   # GET /adresses/1
   # GET /adresses/1.json
   def show
