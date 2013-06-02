@@ -5,13 +5,14 @@ class CreateAdresses < ActiveRecord::Migration
       t.integer :akademischerTitel_id
       t.integer :berufsTitel_id
       t.integer :berufsFunktion_id
+      t.integer :land_id
       
       t.string :vorname
       t.string :nachname
       t.string :adrStrasse
       t.string :adrOrt
       t.string :adrPlz
-      t.string :adrLand
+
       
       t.string :email
       t.string :tel1

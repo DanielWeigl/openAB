@@ -36,8 +36,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><%= link_to "Home", adresses_path %></li>
-              <li><a href="#about">About</a></li>
               <li><%= link_to "Admin", :controller => "admin", :action => "index"  %> </li>
+              <li><a href="#about">About</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -48,11 +48,7 @@
 
       <%= yield %>
 
-    </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    </div> 
     
 
   </body>
