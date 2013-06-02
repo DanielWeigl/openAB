@@ -1,4 +1,4 @@
-<%= form_for(@adress) do |f| %>
+<%= form_for(@adress, :html => { :class=>"form-horizontal"}) do |f| %>
   <% if @adress.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@adress.errors.count, "error") %> prohibited this adress from being saved:</h2>
@@ -11,77 +11,111 @@
     </div>
   <% end %>
   
-  <div class="field">
-    <%= f.label :akademischerTitel_id %><br /> 
-    <%= f.collection_select(:akademischerTitel_id, AkademischerTitel.all, :id, :titel, :include_blank => true) %>
+  <div class="field ">
+    <%= f.label :akademischerTitel_id, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.collection_select(:akademischerTitel_id, AkademischerTitel.all, :id, :titel, :include_blank => true) %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :anrede_id %><br /> 
-    <%= f.collection_select(:anrede_id, Anrede.all, :id, :anrede, :include_blank => true) %>
+    <%= f.label :anrede_id, :class=>"control-label"%>
+    <div class="controls">
+      <%= f.collection_select(:anrede_id, Anrede.all, :id, :anrede, :include_blank => true) %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :berufsTitel_id %><br /> 
-    <%= f.collection_select(:berufsTitel_id, BerufsTitel.all, :id, :titel, :include_blank => true) %>
+    <%= f.label :berufsTitel_id, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.collection_select(:berufsTitel_id, BerufsTitel.all, :id, :titel, :include_blank => true) %>
+    </div>
   </div>
   
   <div class="field">
-    <%= f.label :berufsFunktion_id %><br /> 
-    <%= f.collection_select(:berufsFunktion_id, BerufsFunktion.all, :id, :funktion, :include_blank => true) %>
+    <%= f.label :berufsFunktion_id, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.collection_select(:berufsFunktion_id, BerufsFunktion.all, :id, :funktion, :include_blank => true) %>
+    </div>
   </div>
   
   <div class="field">
-    <%= f.label :vorname %><br />
-    <%= f.text_field :vorname %>
+    <%= f.label :vorname, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :vorname %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :nachname %><br />
-    <%= f.text_field :nachname %>
+    <%= f.label :nachname, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :nachname %>
+    </div>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label :email, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :email %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :tel1 %><br />
-    <%= f.text_field :tel1 %>
+    <%= f.label :tel1, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :tel1 %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :tel2 %><br />
-    <%= f.text_field :tel2 %>
+    <%= f.label :tel2, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :tel2 %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :fax %><br />
-    <%= f.text_field :fax %>
+    <%= f.label :fax, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :fax %>
+    </div>
   </div>
   
   <div class="field">
-    <%= f.label :adrStrasse %><br />
-    <%= f.text_field :adrStrasse %>
+    <%= f.label :adrStrasse, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :adrStrasse %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :adrOrt %><br />
-    <%= f.text_field :adrOrt %>
+    <%= f.label :adrOrt, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :adrOrt %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :adrPlz %><br />
-    <%= f.text_field :adrPlz %>
+    <%= f.label :adrPlz, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :adrPlz %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :adrLand %><br />
-    <%= f.text_field :adrLand %>
+    <%= f.label :adrLand, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :adrLand %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :firma %><br />
-    <%= f.text_field :firma %>
+    <%= f.label :firma, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :firma %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :institution %><br />
-    <%= f.text_field :institution %>
+    <%= f.label :institution, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.text_field :institution %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :newsletter %><br />
-    <%= f.check_box :newsletter %>
+    <%= f.label :newsletter, :class=>"control-label" %>
+    <div class="controls">
+      <%= f.check_box :newsletter %>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>
