@@ -13,6 +13,11 @@ class CreateAdresses < ActiveRecord::Migration
       t.string :adrPlz
       t.string :adrLand
       
+      t.string :email
+      t.string :tel1
+      t.string :tel2
+      t.string :fax      
+      
       t.string :firma
       t.string :institution
       t.boolean :newsletter

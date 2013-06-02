@@ -12,8 +12,23 @@
   <% end %>
   
   <div class="field">
-    <%= f.collection_select( :akademischerTitel_id, AkademischerTitel.all, :id, :titel, :include_blank => true) %>
+    <%= f.label :akademischerTitel_id %><br /> 
+    <%= f.collection_select(:akademischerTitel_id, AkademischerTitel.all, :id, :titel, :include_blank => true) %>
   </div>
+  <div class="field">
+    <%= f.label :anrede_id %><br /> 
+    <%= f.collection_select(:anrede_id, Anrede.all, :id, :anrede, :include_blank => true) %>
+  </div>
+  <div class="field">
+    <%= f.label :berufsTitel_id %><br /> 
+    <%= f.collection_select(:berufsTitel_id, BerufsTitel.all, :id, :titel, :include_blank => true) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :berufsFunktion_id %><br /> 
+    <%= f.collection_select(:berufsFunktion_id, BerufsFunktion.all, :id, :funktion, :include_blank => true) %>
+  </div>
+  
   <div class="field">
     <%= f.label :vorname %><br />
     <%= f.text_field :vorname %>
@@ -22,6 +37,24 @@
     <%= f.label :nachname %><br />
     <%= f.text_field :nachname %>
   </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :tel1 %><br />
+    <%= f.text_field :tel1 %>
+  </div>
+  <div class="field">
+    <%= f.label :tel2 %><br />
+    <%= f.text_field :tel2 %>
+  </div>
+  <div class="field">
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </div>
+  
   <div class="field">
     <%= f.label :adrStrasse %><br />
     <%= f.text_field :adrStrasse %>

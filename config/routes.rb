@@ -1,30 +1,18 @@
 OpenAB::Application.routes.draw do
   get "home/index"
   
-  root :to => "home#index"
+  root :to => "adresses#index"
   
   resources :adresses
-
-
   resources :fax_typs
-
-
   resources :mail_typs
-
-
   resources :telefon_typs
-
-
   resources :berufs_funktions
-
-
   resources :berufs_titels
-
-
   resources :akademischer_titels
-
-
   resources :anredes
+  
+  resources :admin
 
 
   # The priority is based upon order of creation:

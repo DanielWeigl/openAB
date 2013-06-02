@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130601161650) do
+ActiveRecord::Schema.define(:version => 20130601140310) do
 
   create_table "adresses", :force => true do |t|
     t.integer  "anrede_id"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(:version => 20130601161650) do
     t.string   "adrOrt"
     t.string   "adrPlz"
     t.string   "adrLand"
+    t.string   "email"
+    t.string   "tel1"
+    t.string   "tel2"
+    t.string   "fax"
     t.string   "firma"
     t.string   "institution"
     t.boolean  "newsletter"
@@ -71,15 +75,6 @@ ActiveRecord::Schema.define(:version => 20130601161650) do
     t.string   "typ"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "usertyp"
-    t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
   end
 
 end
