@@ -2,8 +2,9 @@
 
 <%= grid(@adr_grid) do |g|
 
-  g.column :name => 'Anrede', :attribute => 'anrede', :model => Anrede do |adr|
-    adr.anrede.anrede
+  g.column :name => 'Anrede', :attribute => 'anrede_id', 
+    :custom_filter => Anrede.find(:all).map{|anrede| [anrede.anrede, anrede.id]}, :auto_reload => true  do |adr|
+    adr.anrede.anrede if adr.anrede
   end
 
   g.column :name => 'Vorname', :attribute => 'vorname'  do |adr|
@@ -19,6 +20,7 @@
   end
 end -%>
 
+<!-- alt -->
 <table>
   <tr>
     <th>Anredetyp</th>

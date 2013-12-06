@@ -5,7 +5,13 @@ class AdressesController < ApplicationController
   def index
     @adresses = Adresse.all
     @adr_grid = initialize_grid(Adresse,
-                                :include => :anrede)
+                                :include => :anrede,
+                                :custom_order => {
+                                                  'adresse.anrede_id' => 'anrede.anrede'
+                                                 },
+                                :enable_export_to_csv => true,
+                                :csv_file_name => 'Adressen'
+                               )
     
     respond_to do |format|
       format.html # index.html.erb
