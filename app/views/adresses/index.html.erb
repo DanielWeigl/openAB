@@ -18,7 +18,7 @@
   end
   
   g.column :name => 'Berufsfunktion', :attribute => 'berufsFunktion_id', 
-    :custom_filter => BerufsFunktion.find(:all).map{|bft| [bft.titel, bft.id]}, :auto_reload => true  do |adr|
+    :custom_filter => BerufsFunktion.find(:all).map{|bft| [bft.funktion, bft.id]}, :auto_reload => true  do |adr|
     adr.berufsFunktion.funktion if adr.berufsFunktion
   end
   
@@ -43,7 +43,7 @@
   end
 
   g.column :name => 'Land', :attribute => 'land_id', 
-    :custom_filter => Land.find(:all).map{|lnd| [lnd.titel, lnd.id]}, :auto_reload => true  do |adr|
+    :custom_filter => Land.find(:all).map{|lnd| [lnd.name, lnd.id]}, :auto_reload => true  do |adr|
     adr.land.name if adr.land
   end
   
