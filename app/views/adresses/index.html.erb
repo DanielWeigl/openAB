@@ -1,5 +1,24 @@
 <h1>Listing adresses</h1>
 
+<%= grid(@adr_grid) do |g|
+
+  g.column :name => 'Anrede', :attribute => 'anrede', :model => Anrede do |adr|
+    adr.anrede.anrede
+  end
+
+  g.column :name => 'Vorname', :attribute => 'vorname'  do |adr|
+    adr.vorname
+  end
+
+  g.column  :name => 'Nachname', :attribute => 'nachname' do |adr|
+    adr.nachname
+  end
+
+  g.column do |adr|
+    link_to('Edit', edit_adress_path(adr))
+  end
+end -%>
+
 <table>
   <tr>
     <th>Anredetyp</th>
@@ -23,7 +42,11 @@
 <% @adresses.each do |adress| %>
   <tr>
 
-    <td><%= adress.vorname %></td>
+    <td><%= adress.anrede.anrede if adress.anrede %></td> 
+    <td><%= adress.akademischerTitel.titel if adress.akademischerTitel %></td> 
+    <td><%= adress.berufsTitel.titel if adress.berufsTitel %></td> 
+    <td><%= adress.berufsFunktion.funktion if adress.berufsFunktion %></td> 
+    <td><%= adress.vorname %></td> 
     <td><%= adress.nachname %></td>
     <td><%= adress.adrStrasse %></td>
     <td><%= adress.adrOrt %></td>

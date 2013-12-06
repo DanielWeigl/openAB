@@ -4,7 +4,9 @@ class AdressesController < ApplicationController
   # GET /adresses.json
   def index
     @adresses = Adresse.all
-
+    @adr_grid = initialize_grid(Adresse,
+                                :include => :anrede)
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @adresses }
@@ -49,7 +51,7 @@ class AdressesController < ApplicationController
   # POST /adresses
   # POST /adresses.json
   def create
-    @adress = Adresse.new(params[:adress])
+    @adress = Adresse.new(params[:adresse])
     
     respond_to do |format|
       if @adress.save
