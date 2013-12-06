@@ -15,6 +15,7 @@ class CreateAdresses < ActiveRecord::Migration
 
       
       t.string :email
+      t.string :emailArbeit
       t.string :tel1
       t.string :tel2
       t.string :fax      

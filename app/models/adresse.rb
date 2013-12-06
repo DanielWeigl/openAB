@@ -7,7 +7,7 @@ class Adresse < ActiveRecord::Base
   has_many :tags
   
   attr_accessible :adrOrt, :adrPlz, :adrStrasse, :firma, :institution, :nachname, :newsletter, :vorname, 
-      :email, :tel1, :tel2, :fax, 
+      :email, :emailArbeit, :tel1, :tel2, :fax, 
       :akademischerTitel_id, :berufsTitel_id, :anrede_id, :berufsFunktion_id, :berufsTitel_id, :land_id
 
 end

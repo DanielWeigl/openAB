@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20130602184621) do
     t.string   "adrOrt"
     t.string   "adrPlz"
     t.string   "email"
+    t.string   "emailArbeit"
     t.string   "tel1"
     t.string   "tel2"
     t.string   "fax"
