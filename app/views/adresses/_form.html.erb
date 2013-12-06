@@ -27,7 +27,7 @@ $(function(){
   <% end %>
   
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
     
       <div class="field ">
         <%= f.label :akademischerTitel_id, :class=>"control-label" %>
@@ -68,14 +68,21 @@ $(function(){
       </div>
 
       <div class="field">
-        <%= f.label :email, :class=>"control-label" %>
+        <%= f.label :email, "eMail", :class=>"control-label" %>
         <div class="controls">
           <%= f.text_field :email %>
         </div>
       </div>
-    
+
+      <div class="field">
+        <%= f.label :emailArbeit, "eMail Arbeit",:class=>"control-label" %>
+        <div class="controls">
+          <%= f.text_field :emailArbeit %>
+        </div>
+      </div>  
+      
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
     
       <div class="field">
         <%= f.label :tel1, :class=>"control-label" %>
@@ -137,16 +144,18 @@ $(function(){
         <div class="controls">
           <%= f.check_box :newsletter %>
         </div>
-      </div>
-      
+      </div>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
       <div class="field" style="clear:both">
         <%= f.label :tags, :class=>"control-label" %>
         <div class="controls">
           <input type="text" id="tags" name="tags[]" />
         </div>
       </div>
-  
-  </div>
+    </div>
   </div>
   
   <div class="actions">

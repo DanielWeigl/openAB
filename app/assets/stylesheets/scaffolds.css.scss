@@ -67,3 +67,22 @@ div {
     list-style: square;
   }
 }
+
+
+.form-horizontal{
+ 
+label{
+  display:inline-block;
+  width:30%;
+}
+
+.controls{
+  display:inline-block;
+  width:190px;
+  select{
+    width:100%;
+  }
+}
+  
+  
+}

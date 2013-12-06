@@ -6,6 +6,7 @@ class AdressesController < ApplicationController
     @adresses = Adresse.all
     @adr_grid = initialize_grid(Adresse,
                                 :include => :anrede,
+                                :include => :akademischerTitel,
                                 :custom_order => {
                                                   'adresse.anrede_id' => 'anrede.anrede'
                                                  },

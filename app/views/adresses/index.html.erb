@@ -7,6 +7,21 @@
     adr.anrede.anrede if adr.anrede
   end
 
+  g.column :name => 'Akademischertitel', :attribute => 'akademischerTitel_id', 
+    :custom_filter => AkademischerTitel.find(:all).map{|akt| [akt.titel, akt.id]}, :auto_reload => true  do |adr|
+    adr.akademischerTitel.titel if adr.akademischerTitel
+  end
+  
+  g.column :name => 'Berufstitel', :attribute => 'berufsTitel_id', 
+    :custom_filter => BerufsTitel.find(:all).map{|brt| [brt.titel, brt.id]}, :auto_reload => true  do |adr|
+    adr.berufsTitel.titel if adr.berufsTitel
+  end
+  
+  g.column :name => 'Berufsfunktion', :attribute => 'berufsFunktion_id', 
+    :custom_filter => BerufsFunktion.find(:all).map{|bft| [bft.funktion, bft.id]}, :auto_reload => true  do |adr|
+    adr.berufsFunktion.funktion if adr.berufsFunktion
+  end
+  
   g.column :name => 'Vorname', :attribute => 'vorname'  do |adr|
     adr.vorname
   end
@@ -14,55 +29,43 @@
   g.column  :name => 'Nachname', :attribute => 'nachname' do |adr|
     adr.nachname
   end
+  
+  g.column  :name => 'Straße', :attribute => 'adrStrasse' do |adr|
+    adr.adrStrasse
+  end
 
+  g.column  :name => 'Ort', :attribute => 'adrOrt' do |adr|
+    adr.adrOrt
+  end
+
+  g.column  :name => 'PLZ', :attribute => 'adrPlz' do |adr|
+    adr.adrPlz
+  end
+
+  g.column :name => 'Land', :attribute => 'land_id', 
+    :custom_filter => Land.find(:all).map{|lnd| [lnd.name, lnd.id]}, :auto_reload => true  do |adr|
+    adr.land.name if adr.land
+  end
+  
+  g.column  :name => 'Firma', :attribute => 'firma' do |adr|
+    adr.firma
+  end
+  
+  g.column  :name => 'Institution', :attribute => 'institution' do |adr|
+    adr.institution
+  end
+  
+  g.column  :name => 'Newsletter', :attribute => 'newsletter' do |adr|
+    adr.newsletter
+  end
+  
+  
   g.column do |adr|
     link_to('Edit', edit_adress_path(adr))
   end
 end -%>
 
 <!-- alt -->
-<table>
-  <tr>
-    <th>Anredetyp</th>
-    <th>Akademischertitel</th>
-    <th>Berufstitel</th>
-    <th>Berufsfunktion</th>
-    <th>Vorname</th>
-    <th>Nachname</th>
-    <th>Adrstrasse</th>
-    <th>Adrort</th>
-    <th>Adrplz</th>
-    <th>Adrland</th>
-    <th>Firma</th>
-    <th>Institution</th>
-    <th>Newsletter</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @adresses.each do |adress| %>
-  <tr>
-
-    <td><%= adress.anrede.anrede if adress.anrede %></td> 
-    <td><%= adress.akademischerTitel.titel if adress.akademischerTitel %></td> 
-    <td><%= adress.berufsTitel.titel if adress.berufsTitel %></td> 
-    <td><%= adress.berufsFunktion.funktion if adress.berufsFunktion %></td> 
-    <td><%= adress.vorname %></td> 
-    <td><%= adress.nachname %></td>
-    <td><%= adress.adrStrasse %></td>
-    <td><%= adress.adrOrt %></td>
-    <td><%= adress.adrPlz %></td>
-    <td><%= adress.land.name if adress.land %></td>
-    <td><%= adress.firma %></td>
-    <td><%= adress.institution %></td>
-    <td><%= adress.newsletter %></td>
-    <td><%= link_to 'Show', adress %></td>
-    <td><%= link_to 'Edit', edit_adress_path(adress) %></td>
-    <td><%= link_to 'Destroy', adress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
 <br />
 
